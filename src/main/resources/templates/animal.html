@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org ">
+<head>
+
+    <title>Pet Shelter App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="../style.css" th:href="@{/style.css}" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">Back To Homepage</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Animal Container -->
+<div class="container-fluid bg-1 text-center" id="animal">
+    <div align="center">
+        <h1>Animal</h1>
+        <p><img th:src="@{'../' + ${animal.name} + '.jpg'}" style="max-width: 350px; max-heigh: 350px;"/></p>
+        <p th:text="|Name: ${animal.name}|">Name of anmial</p></br>
+        <p th:text="|Type: ${animal.type}|">Type of anmial</p></br>
+        <p th:text="|Description: ${animal.description}|">Description of anmial</p></br>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+    <p>Pet Shelter App</p>
+</footer>
+
+</body>
